@@ -1,0 +1,137 @@
+/*****************************
+00. Common CSS
+******************************/
+
+body {
+    font-family: $body-font;
+    font-size: $body-font-size;
+    @extend %secondary-color;
+    line-height: $body-line-height;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    font-weight: 600;
+    font-family: $heading-font;
+    
+}
+p {
+    font-size: $body-font-size;
+    font-weight: 400;
+    &:last-child{
+    	margin-bottom: 0;
+    }
+}
+a, button, img, input, span {
+    @extend %basetransition; 
+}
+input[type=text], input[type=email], input[type=password], input[type=tel], input[type=url], textarea {
+    border: 0;
+    border-bottom: 1px solid $light-grey;
+    @extend %textcenter;
+    padding: 12px 0;
+    font-size: 12px;
+    line-height: 1.6; 
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=tel]:focus, input[type=url]:focus, textarea:focus {
+    border-color: $color-black;
+}
+input[type=submit], button[type=submit]{
+    cursor: pointer;
+}
+input, textarea{
+	@include placeholder{
+		color: $secondary-color;
+	}
+}
+.boxed-btn, input[type=submit], button[type=submit]{
+    
+    &:hover{
+
+    }
+}
+.section-title {
+    font-family: "Louize", sans-serif;
+    letter-spacing: 0.225em;
+    -webkit-transition: all 2.5s ease;
+    -moz-transition: all 2.5s ease;
+    -ms-transition: all 2.5s ease;
+    -o-transition: all 2.5s ease;
+    transition: all 2.5s ease;
+    font-size: 40px;
+    @extend %white-color;
+    line-height: 1.2;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    @include all-below-med{
+        font-size: 26px;
+    }
+    @include all-below-sm{
+        font-size: 20px;
+    }
+}
+
+
+label{
+    @extend %secondary-color;
+}
+.nice-select {
+    @extend %suva-grey;
+    @extend %w100;
+    @extend %uppercase;
+    font-size: 12px;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid $light-grey;
+    text-align: center !important;
+    height: 40px;
+    line-height: 40px;
+}
+.nice-select:after {
+    @extend %displaynone;
+}
+.nice-select:hover {
+    @extend %suva-grey;
+}
+.nice-select:focus {
+    @extend %secondary-color;
+    border-color: $color-black;
+}
+.nice-select .current {
+    font-weight: 600;
+}
+.nice-select .option {
+    line-height: 35px;
+    min-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.nice-select .list {
+    @extend %w100;
+    border-radius: 0;
+    top: 89%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

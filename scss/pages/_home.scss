@@ -1,0 +1,306 @@
+/*****************************
+00. Home CSS
+*****************************/
+.search-btn {
+    @extend %posfixed;
+    @extend %displayinline;
+    @extend %margin0auto;
+    left: 0;
+    bottom: 20px;
+    right: 0;
+    z-index: 9999999;
+    .boxed-btn{
+        @extend %margin0auto;
+    }
+    @include mx-mobile{
+        bottom: 80px;
+    }
+    @include mx-mobile-lg{
+        bottom: 5px;
+    }
+}
+
+#fullpage, html, body {
+    @extend %w100;
+    @extend %h100;
+}
+
+/*=========.section-background-images=============*/ 
+.section-bg-1{background-image: url(../img/reputationg-bg.jpg)}
+.section-bg-2{background-image: url(../img/social-media-bg.jpg)}
+.section-bg-3{background-image: url(../img/reputationg-bg.jpg)}
+.section-bg-4{background-image: url(../img/social-media-bg.jpg)}
+.section-bg-5{background-image: url(../img/reputationg-bg.jpg)}
+.section-bg {
+    @extend %w100;
+    @extend %h100;
+    @extend %backgroundimage;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.active .section-bg{
+    -webkit-transform: scale(1.08);
+    -moz-transform: scale(1.08);
+    -ms-transform: scale(1.08);
+    -o-transform: scale(1.08);
+    transform: scale(1.08);
+    transition: all 4s ease;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    @extend %white-bg-color;
+    width: 8px;
+    height: 8px;
+    margin: -5px 0 0 -3px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+    margin: -5px 0 0 -5px;
+    background: transparent;
+    border: 2px solid $color-white;
+    width: 12px;
+    height: 12px;
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+    margin: -6px 0 0 -5px;
+    background: transparent;
+    border: 2px solid $color-white;
+}
+div#fp-nav {
+    @include mx-mobile{
+        display: none;
+    }
+}
+
+
+
+/*=========.site-search-wrap================*/ 
+.site-search-wrap {
+    @extend %posfixed;
+    @extend %white-bg-color;
+    @extend %textcenter;
+    @extend %h100;
+    top: 0;
+    right: -820px;
+    z-index: 999999999999;
+    width: 820px;
+    min-height: 100vh;
+    -webkit-transition: .3s ease;
+    -moz-transition: .3s ease;
+    -ms-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+    @include all-below-med{
+        width: 80%;
+    }
+    @include all-below-sm{
+        width: 100%;
+    }
+    &.active {
+        right: 0;
+        .search-trigger {
+            display: block;
+        }
+    }
+}
+.site-search-inner {
+    @extend %white-bg-color;
+    overflow: scroll;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @extend %h100;
+    h3 {
+        @extend %uppercase;
+        @extend %posrelative;
+        font-family: 'Gotham';
+        font-size: 24px;
+        font-weight: 500;
+        @include all-below-med{
+            font-size: 18px;
+        }
+        &:after {
+            @extend %pseudo;
+            left: 0;
+            bottom: -40px;
+            right: 0;
+            width: 30px;
+            height: 2px;
+            @extend %secondary-bg-color;
+            @extend %margin0auto;
+            @include all-below-med{
+                bottom: -30px;;
+            }
+        }
+    }
+}
+.search-form {
+    @extend %margin0auto;
+    @extend %displayblock;
+    width: 500px;
+    margin-top: 140px;
+    @include all-below-sm{
+        width: 70%;
+        margin-top: 70px;
+    }
+    label {
+        @extend %displayblock;
+        margin-bottom: 15px;
+        @include all-below-sm{
+            margin-bottom: 0px;
+        }
+    }
+    select {
+        @extend %suva-grey;
+        font-size: 12px;
+    }
+    button {
+        @extend %displayblock;
+        border: 0;
+        width: 150px;
+        @extend %margin0auto;
+        margin-top: 90px;
+        @include all-below-sm{
+            margin-top: 30px;
+        }
+    }
+    .nice-select{
+        @include all-below-sm{
+            margin-bottom: 30px;
+            padding: 0;
+        }
+    }
+}
+
+.search-trigger {
+    cursor: pointer;
+    @extend %posfixed;
+    @extend %displaynone;
+    top: 20px;
+    right: 25px;
+    z-index: 99;
+    height: 30px;
+    width: 30px;
+    @include all-below-med{
+        right: 15px;
+        top: 15px;
+    }
+    span {
+        @extend %displayblock;
+        @extend %visible;
+        @extend %black-bg-color;
+        @extend %posrelative;
+        height: 1px;
+        width: 27px;
+        margin-bottom: 6px;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        -ms-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+    }
+    .opnebar1 {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 14px;
+    }
+    .opnebar2 {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 7px;
+    }
+}
+
+
+
+
+.section-text {
+    @extend %posabsolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+}
+.fp-section h2.section-title{
+    visibility: hidden;
+    opacity: 0 !important;
+    -webkit-transition: 2s ease-in-out;
+    -moz-transition: 2s ease-in-out;
+    -ms-transition: 2s ease-in-out;
+    -o-transition: 2s ease-in-out;
+    transition: 2s ease-in-out;
+}
+.fp-section.active h2.section-title{
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+
+/* animation for text */
+.loading #section1.fp-section.active h2.section-title {
+    opacity: 0!important;
+}
+.loading .section-bg-1{
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1);
+}
+
+/*======.offcanvase-overlay=======*/
+.offcanvase-overlay {
+    left: 0;
+    top: 0;
+    z-index: 998;
+    -webkit-transition: .3s ease; 
+    -moz-transition: .3s ease; 
+    -ms-transition: .3s ease; 
+    -o-transition: .3s ease; 
+    transition: .3s ease; 
+    &.active {
+        visibility: visible;
+        z-index: 998; 
+    }
+}
+
+
+/*==========.site-video-wrapper============*/ 
+.site-video-wrapper{
+    @extend %posabsolute;
+    @extend %w100;
+    @extend %h100;
+    @extend %overflowhidden;
+    top: 0;
+    left: 0;
+    .sit-video {
+        @extend %w100;
+        height: auto;
+    }
+}

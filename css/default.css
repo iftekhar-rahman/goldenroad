@@ -1,0 +1,124 @@
+/* Base CSS */
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i');
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus, input:focus, textarea:focus, button:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #484848;
+    /*overflow-x: hidden;*/
+}
+a:hover { text-decoration: none }
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], textarea {
+    
+}
+input[type="submit"], button[type="submit"] , button[type="button"]{
+    cursor: pointer;
+}
+.section-title{
+    color: #484848;
+}
+.section-title h2 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.boxed-btn, input[type="submit"], button[type="submit"]{
+    color: #0da0f4;
+    text-decoration: none;
+    border: 1px solid #0da0f4;
+    padding: 0px 30px;
+    border-radius: 50px;
+    font-size: 21px;
+    position: relative;
+    z-index: 9;
+    transition: .3s;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+}
+.boxed-btn:hover {
+    color: #fff;
+}
+input[type="submit"]:hover, button[type="submit"]:hover {
+    background-color: #0DA0F4 !important;
+    color: #fff;
+}
+
+/*
+======.owl-dots customization=======
+/*/
+.owl-dots div {
+    height: 5px;
+    width: 5px;
+    background-color: #BBBBBB;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+}
+.owl-dots {
+    text-align: center;
+}
+.owl-dots div.active {
+    background-color: #0DA0F4;
+}
+
+/*
+=====owl nav customization======
+*/
+.owl-nav div {
+    display: inline-block;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    color: #ADADAD;
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: -35px;
+}
+.owl-nav div.owl-next {
+    left: auto;
+    right: -30px;
+}
+.owl-nav div:hover {
+    color: #0DA0F4;
+}
+
+select {
+    font-size: 19px;
+    color: #0da0f4;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 0;
+    padding: 8px 10px;
+}
+select {outline: none }
+
+
+
+

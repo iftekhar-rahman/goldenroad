@@ -1,0 +1,37 @@
+/*
+    Template Name: AutoHQ
+    Author: AutoHQ
+    Description: Bootstrap 4 Template for AutoHQ
+    Version: 1.0
+*/
+
+
+// Fonts
+
+
+// ======================================
+//  Partial Imports
+// ======================================
+
+// Utilities
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/helpers';
+@import 'helpers/functions';
+
+// Base Styles
+@import 'base/reset';
+@import 'base/common';
+
+// Components Styles
+@import 'components/header';
+@import 'components/footer';
+@import 'components/button';
+@import 'components/color'; 
+
+// Pages Styles
+@import 'pages/home';
+
+
+
+
