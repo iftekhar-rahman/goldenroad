@@ -317,15 +317,34 @@ div#fp-nav {
 }
 .header-inline-style{
     background: #202020;
-    height: 150px;
-    padding-top: 15px;
+    padding-top: 25px;
+    padding-bottom: 15px;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 999;
     transition: .4s;
+    @include desktops{
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+    .header-top-area{
+        @include desktops{
+            padding: 35px 0 10px;
+        }
+    }
     .logo{
-        width: 250px;
+        position: relative;
+        @include desktops{
+            padding-right: 70px;
+        }
+        @include large-desktops{
+            padding-right: 0px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+        }
     }
     .header-icons{
         color: #7B7B7B;
@@ -334,15 +353,31 @@ div#fp-nav {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include desktops{
+            top: -5px;
+            right: 5%;
+        }
+        @include large-desktops{
+            top: 0;
+            right: 15%;
+        }
         a{
             margin-left: 20px;
         }
     }
-
-    .mainmenu{
+    .menu-area {
+        @include desktops{
+            margin-top: 15px;
+        }
+    }
+    .main-menu{
         >ul{
             display: flex;
             position: relative;
+            justify-content: center;
             >li{
                 display: inline-block;
                 position: relative;
@@ -384,6 +419,33 @@ div#fp-nav {
             }
         }
     }
+    .mobile-menu-container{
+        position: relative;
+       a.meanmenu-reveal{
+           right: auto!important;
+           left: 0!important;
+           text-indent: 0px!important;
+           margin-left: 15px;
+           margin-top: 3px;
+       }
+        .mean-bar{
+            z-index: 998;
+        }
+        .header-icons{
+            position: absolute;
+            z-index: 999;
+            top: 25px;
+            right: 30px;
+        }
+        &.mean-container .mean-nav ul li a.mean-expand{
+            height: 27px;
+        }
+        &.mean-container {
+            .mean-nav,.mean-bar{
+                background: #202020;
+            }
+        }
+    }
 }
 
 
@@ -407,10 +469,16 @@ div#fp-nav {
 }
 
 [class*="fp-viewing-"]:not(.fp-viewing-0) {
+    .header-inline-style .mainmenu > ul > li > a{
+        padding: 21px 15px 5px;
+    }
+    .menu-area {
+        margin-top: 0px;
+    }
     .site-footer{
         bottom: 0px;
     }
     .header-inline-style{
-        top:-85px;
+        top:-105px;
     }
 }

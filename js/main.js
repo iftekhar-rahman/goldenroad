@@ -2,7 +2,11 @@ jQuery(document).ready(function($){
 
     $('select').niceSelect();
 
-  if ($(window).width() < 992) {
+    jQuery('.main-menu').meanmenu({
+      meanMenuContainer : '.mobile-menu-container',
+      meanScreenWidth: "991"
+    });
+  if ($(window).width() < 991) {
     $('#section2').remove();
   }
   $('#fullpage').fullpage({

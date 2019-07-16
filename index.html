@@ -16,6 +16,7 @@
         <!--Plugins-->
         <link href="css/fullpage.min.css" rel="stylesheet">
         <link href="css/nice-select.css" rel="stylesheet">
+        <link href="./css/meanmenu.css" rel="stylesheet">
 
         <!--Theme specific styles-->
         <link href="fonts/font.css" rel="stylesheet">
@@ -93,66 +94,70 @@
                 <div class="header-inline-style">
                     <!-- #ahq_header starts -->
                     <div class="header-top-area">
-                        <div class="container">
-                                <div class="row">
-                                    <div class="col-6">
+                        <div class="container-fluid">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
                                         <div class="logo">
-                                            <a href="#logo" class="d-block w-100">
-                                                <img src="img/logo.png" alt="" class="w-100">
+                                            <a href="#logo">
+                                                <img src="img/logo-2.png" alt="" >
                                             </a>
-                                        </div>
-                                    </div>
-                                        <div class="col-6">
-                                            <div class="header-icons">
-                                                <a href="#map"><i class="fa fa-map-marker"></i></a>
+                                            <div class="header-icons d-none d-lg-flex">
                                                 <a href="#phone"><i class="fa fa-phone"></i></a>
+                                                <a href="#map"><i class="fa fa-map-marker"></i></a>
                                             </div>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="menu-area">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-9 col-xl-8">
-                                            <div class="mainmenu d-none d-lg-block d-xl-block">
-                                                <ul>
-                                                    <li><a href="#">Used Cars</a>
-                                                        <ul class="sub-menu">
-                                                            <li><a href="#">Ferrari</a></li>
-                                                            <li><a href="#">Lamborghini</a></li>
-                                                            <li><a href="#">Land Rover</a></li>
-                                                            <li><a href="#">Porche</a></li>
-                                                            <li><a href="#">Bentley</a></li>
-                                                            <li><a href="#">Merchedes</a></li>
-                                                            <li><a href="#">Audi</a></li>
-                                                            <li><a href="#">bmw</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Sell Your Car</a></li>
-                                                    <li><a href="#">Finance</a></li>
-                                                    <li><a href="#">Services</a></li>
-                                                    <li><a href="#">News</a></li>
-                                                    <li><a href="#">Contact</a></li>
+                    </div>
+                    <div class="menu-area">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-9 col-xl-8">
+                                        
+                                    <div class="main-menu">
+                                        <ul>
+                                            <li><a href="#">Used Cars</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="#">Ferrari</a></li>
+                                                    <li><a href="#">Lamborghini</a></li>
+                                                    <li><a href="#">Land Rover</a></li>
+                                                    <li><a href="#">Porche</a></li>
+                                                    <li><a href="#">Bentley</a></li>
+                                                    <li><a href="#">Merchedes</a></li>
+                                                    <li><a href="#">Audi</a></li>
+                                                    <li><a href="#">bmw</a></li>
                                                 </ul>
-                                            </div>
-                        
-                                            <!-- 
-                                            Phone and Map icons visible on small devices, hidden on large devices
-                                            -->
-                                            <div class="icons-small-devices d-none">
-                                                <a href="#map"><i class="fa fa-map-marker"></i></a>
-                                                <a href="#phone"><i class="fa fa-phone"></i></a>
-                                            </div>
-                                            <a href="#" class="menu-trigger">
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </a>
-                                        </div>
+                                            </li>
+                                            <li><a href="#">Sell Your Car</a></li>
+                                            <li><a href="#">Finance</a></li>
+                                            <li><a href="#">Services</a></li>
+                                            <li><a href="#">News</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                        </ul>
                                     </div>
+                                    <!-- 
+                                    Phone and Map icons visible on small devices, hidden on large devices
+                                    -->
+                                    <div class="icons-small-devices d-none">
+                                        <a href="#map"><i class="fa fa-map-marker"></i></a>
+                                        <a href="#phone"><i class="fa fa-phone"></i></a>
+                                    </div>
+                                    <a href="#" class="menu-trigger">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-container">
+                            <div class="header-icons d-lg-none">
+                                    <a href="#phone"><i class="fa fa-phone"></i></a>
+                                    <a href="#map"><i class="fa fa-map-marker"></i></a>
+                                </div>
+                    </div>
                 </div>
                 </div>
             <!-- .site-navigation ends -->
@@ -283,6 +288,7 @@
         <!--Plugins-->
         <script src="js/fullpage.min.js"></script>
         <script src="js/jquery.nice-select.min.js"></script>
+        <script src="./js/meanmenu.js"></script>
 
         <!--Active & Custom JS-->
         <script src="js/main.js"></script>
