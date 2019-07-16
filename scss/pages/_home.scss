@@ -304,3 +304,113 @@ div#fp-nav {
         height: auto;
     }
 }
+
+
+
+/* ----------------------------------------------------------------*/
+
+
+.header-inline-disable,.offcanvas-active{
+    .header-inline-style{
+        display: none;
+    }
+}
+.header-inline-style{
+    background: #202020;
+    height: 150px;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    transition: .4s;
+    .logo{
+        width: 250px;
+    }
+    .header-icons{
+        color: #7B7B7B;
+        height: 100%;
+        font-size: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        a{
+            margin-left: 20px;
+        }
+    }
+
+    .mainmenu{
+        >ul{
+            display: flex;
+            position: relative;
+            >li{
+                display: inline-block;
+                position: relative;
+                z-index: 9;
+                >a{
+                    color: #7b7b7b;
+                    padding:21px 15px;
+                    font-size: 19px;
+                }
+                a{
+                    font-size: 19px;
+                }
+                >ul{
+                    position: absolute;
+                    top:110%;
+                    background: #fff;
+                    padding: 10px 0;
+                    opacity: 0;
+                    transition: .4s;
+                    pointer-events: none;
+                    &.sub-menu{
+                        width: 250px;
+                    }
+                    >li{
+                        >a{
+                            color: #202020;
+                            display: block;
+                            padding: 7.5px 10px 7.5px 20px;
+                        }
+                    }
+                }
+                &:hover{
+                    >ul{
+                        top: 100%;
+                        opacity: 1;
+                        pointer-events: visible;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Footer styles*/
+
+.site-footer{
+     background: #202020;
+     height: 40px;
+     position: fixed;
+     bottom: -40px;
+     width: 100%;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: .4s;
+    p{
+        color: #fff;
+        margin-bottom: 0;
+    }
+}
+
+[class*="fp-viewing-"]:not(.fp-viewing-0) {
+    .site-footer{
+        bottom: 0px;
+    }
+    .header-inline-style{
+        top:-85px;
+    }
+}
