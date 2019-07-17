@@ -318,12 +318,12 @@ div#fp-nav {
 .header-inline-style{
     background: #202020;
     padding-top: 25px;
-    padding-bottom: 15px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
     transition: .4s;
+    padding-bottom: 15px;
     @include desktops{
         padding-top: 15px;
         padding-bottom: 0px;
@@ -469,8 +469,14 @@ div#fp-nav {
 }
 
 [class*="fp-viewing-"]:not(.fp-viewing-0) {
-    .header-inline-style .mainmenu > ul > li > a{
-        padding: 21px 15px 5px;
+    .header-inline-style{
+        padding-bottom: 5px;
+        @include desktops{
+            padding-bottom: 0;
+        }
+    }
+    .header-inline-style .main-menu > ul > li > a{
+        padding: 20px 15px 8px;
     }
     .menu-area {
         margin-top: 0px;
@@ -479,6 +485,9 @@ div#fp-nav {
         bottom: 0px;
     }
     .header-inline-style{
-        top:-105px;
+        top:-65px;
+        @include desktops{
+            top:-77px;
+        }
     }
 }
